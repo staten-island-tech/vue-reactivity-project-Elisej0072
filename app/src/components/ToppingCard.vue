@@ -1,12 +1,8 @@
 <template>
-    <div>
-
 <div>
 <h2> {{ topping.name }}</h2>
 <h3>{{ topping.price }}</h3>
 </div>
-
-    </div>
 </template>
 
 <script>
