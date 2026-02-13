@@ -1,6 +1,7 @@
 <template>
-    <div>
- <img src = "">
+
+    <div class="container">
+        <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">{{ topping.name }}</ToppingCard> 
     </div>
 </template>
 
