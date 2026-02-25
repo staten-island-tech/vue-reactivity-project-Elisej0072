@@ -1,15 +1,17 @@
 <template>
-       <h1>ksdgjasgjh</h1>
+       <h1>ksdgjfjfhfh</h1>
     <div class="container">
-        <ToppingCard v-for="topping in toppings" :key="topping.name" :topping="topping">{{ topping.name }}</ToppingCard> 
+        <HomeView> <ToppingCard> v-for="topping in toppings" :key="topping.name" :topping="topping">{{ topping.name }}</ToppingCard></HomeView>
+         
     </div>
     
 </template>
 
 <script>
 import { ref } from 'vue'
+import ToppingCard from '@/components/ToppingCard.vue'
 
-const toppings =ref([
+const toppings = ref([
 { name: 'sliced beef', price: ''},
 { name: 'chicken', price: ''},
 { name: 'beef balls', price: ''},
