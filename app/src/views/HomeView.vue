@@ -16,7 +16,13 @@ import ToppingCard from '@/components/ToppingCard.vue';
 const toppings = ref([
 { name: 'sliced beef', price: ''},
 { name: 'chicken', price: ''},
+{ name: 'ribeye', price: ''},
+{ name: 'oxtail', price: ''},
+{ name: 'shrimp', price: ''},
+{ name: 'seafood', price: ''},
 { name: 'beef balls', price: ''},
+{ name: 'fish balls', price: ''},
+{ name: 'beef tendon', price: ''},
 { name: 'tripe', price: ''},
 { name: 'beansprouts', price: ''},
 { name: 'basil', price: ''},

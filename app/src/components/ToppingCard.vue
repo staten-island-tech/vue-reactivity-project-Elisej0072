@@ -2,6 +2,7 @@
     <div>
 <h2> {{ topping.name }}</h2>
 <h3>{{ topping.price }}</h3>
+<img: scr="topping.img"></img:>
     </div>
 </template>
 
