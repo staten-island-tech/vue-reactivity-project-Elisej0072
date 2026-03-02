@@ -1,20 +1,29 @@
-<template>
-       <h1>ksdgjfjfhfh</h1>
-    <div class="container">
-        <BreadCard v-for="bread in breads" 
+<template> 
+<h1>ksdgjfjfhfh</h1>
+<div class="container">
+        <BreadCard v-for= "bread in breads" 
         :key="bread.name" 
-        :bread="bread">{{ bread.name }}</BreadCard>
-         
+        :breads="bread">
+        <button @click="addToCart(bread)">Add to Cart</button>
+      </BreadCard>
     </div>
-    
 </template>
 
 <script>
 import { ref } from 'vue'
+
 import BreadCard from '@/components/BreadCard.vue';
 
+function addToCart(bread) {
+  console.log(bread)
+}
+
 const breads = ref([
-{ name: 'bred', price: ''},
+{ name: 'bred' , price: 1 },
+{ name: 'bred1', price: 1 },
+{ name: 'bred2', price: 1 },
+{ name: 'bred3', price: 1 },
+{ name: 'bred4', price: 1 },
 ])
 
 </script>

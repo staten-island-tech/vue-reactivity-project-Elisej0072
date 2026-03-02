@@ -8,7 +8,7 @@
 
 <script setup>
    defineProps({
-        topping:{
+            bread:{
             type: Object,
             required: true
         },
