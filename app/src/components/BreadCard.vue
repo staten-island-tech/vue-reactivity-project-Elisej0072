@@ -1,8 +1,8 @@
 <template>
     <div>
-<h2> {{ topping.name }}</h2>
-<h3>{{ topping.price }}</h3>
-<img: scr="topping.img"></img:>
+<h2> {{ bread.name }}</h2>
+<h3>{{ bread.price }}</h3>
+<img: scr="bread.img"></img:>
     </div>
 </template>
 

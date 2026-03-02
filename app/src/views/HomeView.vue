@@ -1,9 +1,9 @@
 <template>
        <h1>ksdgjfjfhfh</h1>
     <div class="container">
-        <ToppingCard v-for="topping in toppings" 
-        :key="topping.name" 
-        :topping="topping">{{ topping.name }}</ToppingCard>
+        <BreadCard v-for="bread in breads" 
+        :key="bread.name" 
+        :bread="bread">{{ bread.name }}</BreadCard>
          
     </div>
     
@@ -11,26 +11,10 @@
 
 <script>
 import { ref } from 'vue'
-import ToppingCard from '@/components/ToppingCard.vue';
+import BreadCard from '@/components/BreadCard.vue';
 
-const toppings = ref([
-{ name: 'sliced beef', price: ''},
-{ name: 'chicken', price: ''},
-{ name: 'ribeye', price: ''},
-{ name: 'oxtail', price: ''},
-{ name: 'shrimp', price: ''},
-{ name: 'seafood', price: ''},
-{ name: 'beef balls', price: ''},
-{ name: 'fish balls', price: ''},
-{ name: 'beef tendon', price: ''},
-{ name: 'tripe', price: ''},
-{ name: 'beansprouts', price: ''},
-{ name: 'basil', price: ''},
-{ name: 'mint', price: ''},
-{ name: 'onions', price: ''},
-{ name: 'lime', price: ''},
-{ name: 'cilantro', price: ''},
-{ name: 'jalapenos', price: ''},
+const breads = ref([
+{ name: 'bred', price: ''},
 ])
 
 </script>
