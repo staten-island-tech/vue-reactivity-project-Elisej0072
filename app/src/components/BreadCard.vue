@@ -2,7 +2,7 @@
     <div>
 <h2> {{ bread.name }}</h2>
 <h3>{{ bread.price }}</h3>
-<img: scr="bread.img"></img:>
+<img :src="bread.img" alt= "" />
     </div>
 </template>
 

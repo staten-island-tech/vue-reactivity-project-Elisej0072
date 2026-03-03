@@ -1,17 +1,16 @@
 <template> 
-<h1>ksdgjfjfhfh</h1>
+<h1> bread shop </h1>
 <div class="container">
+
         <BreadCard v-for= "bread in breads" 
         :key="bread.name" 
-        :breads="bread">
-        <button @click="addToCart(bread)">Add to Cart</button>
-      </BreadCard>
+        :bread="bread"/>
+       <button @click="addToCart(bread)">Add to Cart</button>
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
-
 import BreadCard from '@/components/BreadCard.vue';
 
 function addToCart(bread) {
@@ -19,14 +18,22 @@ function addToCart(bread) {
 }
 
 const breads = ref([
-{ name: 'bred' , price: 1 },
-{ name: 'bred1', price: 1 },
-{ name: 'bred2', price: 1 },
-{ name: 'bred3', price: 1 },
-{ name: 'bred4', price: 1 },
+{ name: 'strawberry jam', img:"/strberryjam.png", price:'3 coins'},
+{ name: 'fresh strawberries', img:"/strberry.png", price: '2 coins' },
+{ name: 'egg', price: '4 coins' },
+{ name: 'banana peanut butter', price: '3 coins' },
+{ name: 'blueberry jam', price: '3 coins' },
+{ name: 'fresh kiwi', price:'2 coins' },
+{ name: 'orange jam', price: '3 coins' },
+{ name: 'raspberry jam', price: '3 coins' },
+{ name: 'cherry jam', price: '3 coins' },
+{ name: 'blackberry jam', price: '3 coins' },
+{ name: 'peach jam', price: '3 coins' },
+{ name: 'avocado', price: '4 coins' },
 ])
 
 </script>
+
 
 <style scoped>
 div {
@@ -41,9 +48,10 @@ h1 {
   display: flex;
   width: 80vw;
   margin: 20px auto;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
+  
 }
 .card {
   border: 1px solid #ccc;
