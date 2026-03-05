@@ -1,8 +1,9 @@
 <template>
     <div>
 <h2> {{ bread.name }}</h2>
-<h3>{{ bread.price }}</h3>
 <img :src="bread.img" alt= "" />
+<h4>{{ bread.price }}</h4>
+<button @click="addToCart(bread)"> BUY </button>
     </div>
 </template>
 
@@ -26,4 +27,5 @@ div{
     border: 6px solid rgba(155, 109, 79, 0.418);
     margin-top: 15px ;
 }
+
 </style>

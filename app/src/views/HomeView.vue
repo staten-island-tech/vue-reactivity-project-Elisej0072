@@ -1,24 +1,16 @@
 <template> 
 <h1> bread shop :3 </h1>
 <div class="container">
-
         <BreadCard v-for= "bread in breads" 
         :key="bread.name" 
-        :bread="bread"/>
-       
+        :bread="bread"/>  
     </div>
-
-    <button @click="addToCart(bread)">Add to Cart</button>
 </template>
 
 <script setup>
 
 import { ref } from 'vue'
 import BreadCard from '@/components/BreadCard.vue';
-
-function addToCart(bread) {
-  console.log(bread)
-}
 
 const breads = ref([
 { name: 'strawberry jam', img:"/strberryjam.png", price:'3 coins'},
@@ -35,14 +27,19 @@ const breads = ref([
 { name: 'avocado', img:"/avocado.png", price: '4 coins' },
 ])
 
-
+const cart = ref([])
+function addToCart(bread) {
+cart.value.push(bread);
+cart.value = ''
+console.log(`bread.name`,`bread.price`);
+}
 
 </script>
 
 
 <style scoped>
 div {
-  padding: 16px;
+  padding: 17px;
 }
 
 h1 {
@@ -52,7 +49,7 @@ h1 {
 .container {
   display: flex;
   width: 80vw;
-  margin: 20px auto;
+  margin: 2px auto;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
