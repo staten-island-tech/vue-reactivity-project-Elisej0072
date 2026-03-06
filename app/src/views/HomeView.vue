@@ -5,12 +5,14 @@
         :key="bread.name" 
         :bread="bread"/>  
     </div>
+
 </template>
 
 <script setup>
 
 import { ref } from 'vue'
 import BreadCard from '@/components/BreadCard.vue';
+import ItemCart from '@/components/ItemCart.vue';
 
 const breads = ref([
 { name: 'strawberry jam', img:"/strberryjam.png", price:'3 coins'},
@@ -30,8 +32,7 @@ const breads = ref([
 const cart = ref([])
 function addToCart(bread) {
 cart.value.push(bread);
-cart.value = ''
-console.log(`bread.name`,`bread.price`);
+console.log("bread.name", "bread.price");
 }
 
 </script>
@@ -44,7 +45,7 @@ div {
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 .container {
   display: flex;
